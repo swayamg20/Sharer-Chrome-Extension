@@ -1,0 +1,22 @@
+{
+    "name" : "Sharer!",
+    "description" : "Now share anything anytime anywhere!",
+    "version" : "1.0",
+    "permissions" : ["contextMenus", "activeTab"],
+    "icons" : {
+        "16" : "16.png",
+        "48" : "48.png",
+        "64" : "64.png",
+        "128" : "128.png"
+    },
+    "background" : {
+        "scripts" : ["background.js"]
+    },
+    "content_scripts" : [
+        {
+            "matches" : ["*://www.google.com/*", "*://www.youtube.com/*"],
+            "js" : ["index.js"]
+        }
+    ],
+    "manifest_version" : 2
+}
